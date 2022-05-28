@@ -8,7 +8,7 @@ const BUILD_DIR = path.join(__dirname, "dist");
 
 module.exports = {
   entry: {
-    app: path.join(APP_DIR, "Index.tsx"),
+    app: path.join(APP_DIR, "index.tsx"),
   },
   output: {
     filename: "[name].[hash].js",
@@ -17,6 +17,7 @@ module.exports = {
   plugins: [
     new HtmlWebPackPlugin({
       template: path.join(__dirname, "public/index.html"),
+      favicon: "public/favicon.ico",
     }),
     new MiniCssExtractPlugin(),
   ],
@@ -58,5 +59,6 @@ module.exports = {
   devServer: {
     port: 3002,
     compress: true,
+    historyApiFallback: true,
   },
 };

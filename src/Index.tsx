@@ -1,11 +1,17 @@
 import React from "react";
-import ReactDOM from "react-dom";
-import App from "./App";
+import ReactDOM from "react-dom/client";
 import "./index.scss";
+import App from "./App";
+import { BrowserRouter, HashRouter } from "react-router-dom";
 
-ReactDOM.render(
+const root = ReactDOM.createRoot(
+  document.getElementById("root") as HTMLElement
+);
+
+root.render(
   <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.querySelector("#root")
+    <HashRouter>
+      <App />
+    </HashRouter>
+  </React.StrictMode>
 );
