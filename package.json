@@ -3,9 +3,12 @@
   "version": "1.0.0",
   "description": "My dev profile",
   "main": "index.js",
+  "homepage": "https://abdulkalam1233.github.io",
   "scripts": {
     "start": "webpack-dev-server --hot --open --mode development --config webpack.config.js",
-    "build": "webpack --progress --mode production --config webpack.config.js"
+    "build": "webpack --progress --mode production --config webpack.config.js",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "author": "",
   "license": "ISC",
@@ -35,6 +38,7 @@
     "webpack-dev-server": "^4.9.0"
   },
   "dependencies": {
+    "gh-pages": "^4.0.0",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-icons": "^4.3.1",
