@@ -7,7 +7,6 @@ import {
   FaTwitterSquare,
 } from "react-icons/fa";
 import profile from "../../assets/profile.png";
-import Resume from "../../assets/resume.pdf";
 import {
   DiJava,
   DiJavascript,
@@ -56,7 +55,7 @@ function About() {
           <FaInstagram size={"1.5rem"} />
         </a>
       </div>
-      <div className="resume mt-4">
+      {/* <div className="resume mt-4">
         <a
           className="bg-contain bg-red-500 p-2 rounded-lg text-white w-[6rem]"
           href={Resume}
@@ -64,7 +63,7 @@ function About() {
         >
           Resume
         </a>
-      </div>
+      </div> */}
       <div className="network mt-6 flex space-x-3">
         <DiNodejs size={"2rem"} color="green" title="NodeJS" />
         <DiReact size={"2rem"} color="skyblue" title="React" />
